@@ -2,10 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import './animation.css'
 import Image from 'next/image'
-import imageOne from '@/Images/ferrari-clip-1.jpg'
-import imageTwo from '@/Images/ferrari-clip-2.jpg'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import gsap from 'gsap'
 import bezier from 'bezier-easing'
 
 function Animation() {
@@ -54,14 +51,14 @@ function Animation() {
             <motion.div className="image-left"
              style={{clipPath}}
             >
-                <Image src={imageOne} alt='image' className='ferrari-image'/>
+                <Image src={"./Images/ferrari-clip-1.jpg"} alt='image' className='ferrari-image'/>
                 <motion.div className="float-text float-text-left">
                     <h1></h1>
                 </motion.div>
             </motion.div>
 
             <div className="image-right">
-                <Image src={imageTwo} alt='image' className='ferrari-image'/>
+                <Image src={"./Images/ferrari-clip-2.jpg"} alt='image' className='ferrari-image'/>
                 <motion.div className="float-text float-text-right">
                     <h1></h1>
                 </motion.div>
