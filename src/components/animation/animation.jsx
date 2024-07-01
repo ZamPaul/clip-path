@@ -8,32 +8,6 @@ import bezier from 'bezier-easing'
 function Animation() {
     const ease = bezier(0.76, 0, 0.24, 1)
 
-    // const animLeft = () => {
-    //     gsap.to('.image-left',{
-    //         clipPath: 'polygon(0 0, 20% 0, 20% 100%, 0% 100%)',
-    //         duration: 2,
-    //         ease: ease,
-    //         onComplete: function(){
-    //             requestAnimationFrame(animRight)
-    //         }
-    //     })
-    // }
-
-    // const animRight = () => {
-    //     gsap.to('.image-left',{
-    //         clipPath: 'polygon(0 0, 80% 0, 80% 100%, 0% 100%)',
-    //         duration: 2,
-    //         ease: ease,
-    //         onComplete: function(){
-    //             requestAnimationFrame(animLeft)
-    //         }
-    //     })
-    // }
-
-    // useEffect(()=>{
-    //     requestAnimationFrame(animLeft)
-    // },[])
-
     const valueX = useMotionValue(0)
 
     const springX = useSpring(valueX,{stiffness:120, damping:20, mass:0.18})
