@@ -1,0 +1,38 @@
+.whole-wrap{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    pointer-events: all;
+    /* cursor: pointer; */
+}
+
+.image-left, .image-right{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.image-left{
+    z-index: 200;
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+}
+
+.image-right{
+    z-index: 100;
+}
+
+.ferrari-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    filter: brightness(86%);
+    pointer-events: none;
+}
+
+.float-text{
+    position: absolute;
+}
